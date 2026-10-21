@@ -1,0 +1,156 @@
+/* 全局重置与深蓝科技感大屏样式规范 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #030a1c;
+  color: #e0f2fe;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  user-select: none;
+}
+
+/* 世界银行品牌色系统 */
+:root {
+  --bocom-blue: #003b8e;         /* 世行深海蓝 */
+  --bocom-light-blue: #0066cc;   /* 世行亮蓝 */
+  --bocom-cyan: #00f2fe;         /* 科技青蓝 */
+  --bocom-gold: #ffb703;         /* 金融金 */
+  --bocom-danger: #ff4d4f;       /* 预警红 */
+  --bocom-success: #00f5d4;      /* 正常绿 */
+  --border-glow: rgba(0, 210, 255, 0.4);
+  --card-bg: rgba(6, 20, 50, 0.65);
+}
+
+/* 炫酷滚动条 */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 242, 254, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 霓虹发光文字特效 */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.8), 0 0 20px rgba(0, 102, 204, 0.6);
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 10px rgba(255, 183, 3, 0.8), 0 0 20px rgba(255, 183, 3, 0.4);
+}
+
+/* 科技边框与容器装饰 */
+.tech-card {
+  position: relative;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.card-inner .corner-tl,
+.card-inner .corner-tr,
+.card-inner .corner-bl,
+.card-inner .corner-br {
+  display: none;
+}
+
+
+/* 四角定位炫光小标记 */
+.corner-tl, .corner-tr, .corner-bl, .corner-br {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: #00f2fe;
+  pointer-events: none;
+}
+.corner-tl {
+  top: 0;
+  left: 0;
+  border-top: 2px solid #00f2fe;
+  border-left: 2px solid #00f2fe;
+}
+.corner-tr {
+  top: 0;
+  right: 0;
+  border-top: 2px solid #00f2fe;
+  border-right: 2px solid #00f2fe;
+}
+.corner-bl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #00f2fe;
+  border-left: 2px solid #00f2fe;
+}
+.corner-br {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #00f2fe;
+  border-right: 2px solid #00f2fe;
+}
+
+/* 模块标题栏 */
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 6px;
+  border-bottom: 1px solid rgba(0, 210, 255, 0.15);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #e2f1ff;
+}
+
+.card-title .title-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-title .icon-bar {
+  width: 4px;
+  height: 14px;
+  background: linear-gradient(180deg, #00f2fe 0%, #0066cc 100%);
+  border-radius: 2px;
+  box-shadow: 0 0 8px #00f2fe;
+}
+
+.card-title .sub-tag {
+  font-size: 11px;
+  color: rgba(180, 220, 255, 0.7);
+  background: rgba(0, 102, 204, 0.25);
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+/* 动态网格背景扫描线 */
+.grid-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 100, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 100, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}

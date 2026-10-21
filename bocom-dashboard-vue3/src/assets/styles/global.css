@@ -1,0 +1,41 @@
+/* 全局重置与深蓝科技感大屏样式规范 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #020919;
+  color: #e0f2fe;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  user-select: none;
+}
+
+/* 霓虹发光文字特效 */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.8), 0 0 20px rgba(0, 102, 204, 0.6);
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 10px rgba(255, 183, 3, 0.8), 0 0 20px rgba(255, 183, 3, 0.4);
+}
+
+/* 动态网格背景扫描线 */
+.grid-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 100, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 100, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+}
