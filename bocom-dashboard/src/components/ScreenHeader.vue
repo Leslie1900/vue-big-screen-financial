@@ -128,6 +128,7 @@ export default {
   padding: 4px 10px;
   border-radius: 4px;
   box-shadow: 0 0 12px rgba(0, 180, 255, 0.5);
+  animation: logo-badge-breathe 2.8s ease-in-out infinite;
 }
 
 .logo-title {
@@ -142,12 +143,58 @@ export default {
   background: linear-gradient(180deg, #ffffff 0%, #b8e2ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
+  transform-origin: left center;
+  animation: wb-name-breathe 2.8s ease-in-out infinite;
+  will-change: transform, filter;
 }
 
 .en-name {
   font-size: 8px;
   letter-spacing: 1px;
   color: rgba(180, 220, 255, 0.7);
+  display: inline-block;
+  transform-origin: left center;
+  animation: wb-en-breathe 2.8s ease-in-out infinite;
+  will-change: transform, color;
+}
+
+@keyframes wb-name-breathe {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px rgba(0, 210, 255, 0.3)) drop-shadow(0 0 6px rgba(0, 140, 255, 0.2));
+    opacity: 0.88;
+    transform: scale(0.97);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.95)) drop-shadow(0 0 20px rgba(0, 180, 255, 0.8));
+    opacity: 1;
+    transform: scale(1.14);
+  }
+}
+
+@keyframes wb-en-breathe {
+  0%, 100% {
+    color: rgba(180, 220, 255, 0.6);
+    opacity: 0.8;
+    transform: scale(0.97);
+  }
+  50% {
+    color: #00f2fe;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.7);
+    opacity: 1;
+    transform: scale(1.10);
+  }
+}
+
+@keyframes logo-badge-breathe {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(0, 180, 255, 0.4), inset 0 0 4px rgba(0, 242, 254, 0.2);
+    border-color: rgba(0, 210, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 242, 254, 0.85), inset 0 0 8px rgba(0, 242, 254, 0.5);
+    border-color: #00f2fe;
+  }
 }
 
 .status-indicator {
